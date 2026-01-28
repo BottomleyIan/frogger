@@ -24,6 +24,5 @@ func animation():
 		else:
 			$AnimatedSprite2D.animation = "left"
 			$AnimatedSprite2D.flip_h = direction.x > 0
-		
 	else:
 		$AnimatedSprite2D.frame = 0
