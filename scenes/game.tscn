@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://r8e5vdmp0k17"]
+
+[ext_resource type="Texture2D" uid="uid://doghmovcgeltw" path="res://graphics/map.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://dghd7rii024ea" path="res://scenes/player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://d3mwt0tc8jd0y" path="res://scenes/tree_1.tscn" id="3_lnu2h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnu2h"]
+size = Vector2(18, 672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbhrr"]
+size = Vector2(414, 20)
+
+[node name="Game" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-320.0]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yqjtg")
+
+[node name="Player" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(21, 48)
+
+[node name="Tree1" parent="." instance=ExtResource("3_lnu2h")]
+
+[node name="Borders" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders"]
+position = Vector2(202, -2)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders"]
+position = Vector2(-202, -5)
+shape = SubResource("RectangleShape2D_lnu2h")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders"]
+position = Vector2(0, -330)
+shape = SubResource("RectangleShape2D_lbhrr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Borders"]
+position = Vector2(0, 331)
+shape = SubResource("RectangleShape2D_lbhrr")

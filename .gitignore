@@ -1,0 +1,10 @@
+# Godot editor import/cache data
+.godot/
+.import/
+
+# Mono/.NET files (if using C#)
+.mono/
+
+# Editor/IDE files
+.vscode/
+.vs/
